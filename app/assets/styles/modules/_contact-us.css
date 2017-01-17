@@ -1,0 +1,76 @@
+.contact-us {
+	background: url('../../assets/images/computer-564099_1920.jpg') no-repeat center center;
+	@mixin overlay;
+
+	.form-message {
+		width: 28rem;
+		margin: 0 auto;
+		background: rgba(#eee, .8);
+		text-align: center;
+		padding: 10px 0;
+		margin-bottom: 25px;
+		display: none;
+		font-weight: 700;
+
+		&--error {
+			color: #c0392b;
+			display: block;
+		}
+
+		&--success {
+			color: #2bbe69;
+			display: block;
+		}
+	}
+
+	&__form {
+		input::placeholder, textarea::placeholder {
+			color: $light;
+			font-family: $fontFamilySecondary;
+		}
+
+		input, textarea {
+			display: block;
+			margin: 0 auto;
+			margin-top: 12px;
+			padding-left: 10px;
+			background: transparent;
+			color: $light;
+			border: 2px solid $light;
+		}
+
+		input:focus, textarea:focus {
+			border: 2px solid $accentColor;
+		}
+
+		& .field-invalid {
+			border: 2px solid #c0392b;
+		}
+
+		input, textarea, button {
+			width: 80%;
+
+			@mixin atMedium {
+				width: 28rem;
+			}
+		}
+
+		input {
+			height: 3.5rem;
+		}
+
+		textarea {
+			height: 9.3rem;
+			padding-top: 10px;
+		}
+
+		button {
+			margin: 0 auto;
+			margin-top: 15px;
+			padding: 0;
+			height: 2.8rem;
+			border: 0;
+			background: $accentColor;
+		}
+	}
+}

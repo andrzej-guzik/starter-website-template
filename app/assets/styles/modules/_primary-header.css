@@ -1,0 +1,114 @@
+.primary-header {
+	position: relative;
+	width: 100%;
+	z-index: 3;
+
+	@mixin atLarge {
+		position: fixed;
+		height: 64px;
+		top: 0;
+		background: rgba(#fff, .85);
+	}
+
+	&--dark {
+		background: rgba(#2a2a2a, .9);
+	}
+
+	&__logo {
+		float: left;
+		transition: all .3s ease-out;
+
+		.primary-header--dark & {
+			transform: scale(.65);
+			h1 {
+				color: $light;
+			}
+		}
+
+		&--center {
+			z-index: 3;
+			float: none;
+			position: absolute;
+			top: 2%;
+			left: 50%;
+			transform: scale(.8) translateX(-50%);
+		}
+
+		h1 {
+			margin: 0;
+			font-family: $fontFamilyLogo;
+			font-weight: 700;
+			font-size: 1.8rem;
+			line-height: 64px;
+
+			@mixin atMedium {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	&__menu-icon {
+		width: 40px;
+		height: 30px;
+		position: absolute;
+		z-index: 10;
+		top: 17px;
+		right: 25px;
+		cursor: pointer;
+
+		@mixin atLarge {
+			display: none;
+		}
+
+		&:before {
+	      content: "";
+	      position: absolute;
+	      top: 0;
+	      left: 0;
+	      width: 40px;
+	      height: 4px;
+	      background-color: $gray;
+	      transform-origin: 0 0;
+	      transition: transform .3s ease-out;
+   		 }
+
+   		&__middle {
+	      position: absolute;
+	      top: 13px;
+	      left: 0;
+	      width: 40px;
+	      height: 4px;
+	      background-color: $gray;
+	      transition: all .3s ease-out;
+	      transform-origin: 0 50%;
+    	}
+
+	    &:after {
+	      content: "";
+	      position: absolute;
+	      bottom: 0;
+	      left: 0;
+	      width: 40px;
+	      height: 4px;
+	      background-color: $gray;
+	      transform-origin: 0 100%;
+	      transition: transform .3s ease-out;
+	    }
+	}
+
+	&__menu-icon--close {
+	    &:before {
+	      transform: rotate(45deg);
+	    }
+
+	    &:after {
+	      transform: rotate(-45deg) translateY(1px);
+	    }
+
+		.primary-header__menu-icon__middle {
+	      opacity: 0;
+	      transform: scaleX(0);
+	    }
+  	}
+
+}

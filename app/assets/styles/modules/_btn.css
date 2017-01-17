@@ -1,0 +1,21 @@
+.btn {
+	display: block;
+	padding: 13px 45px;
+	border: none;
+	background: $accentColor;
+	color: $light;
+	font-family: $fontFamilyPrimary;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all .2s ease-out;
+	&:hover {
+		background: $light;
+		color: $accentColor;
+	}
+
+	&--large {
+		padding: 13px 65px;
+	}
+}

@@ -1,0 +1,31 @@
+.what-we-do-item {
+	position: relative;
+
+	&__icon {
+		position: absolute;
+		font-size: 3.4rem;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $accentColor;
+
+		@mixin atMedium {
+			font-size: 2.25rem;
+			top: 0;
+			left: 0;
+			transform: translateX(0);
+		}
+	}
+
+	&__text {
+		padding-top: 75px;
+		text-align: center;
+
+		@mixin atMedium {
+			width: 85%;
+			text-align: left;
+			padding-top: 0;
+			padding-left: 55px;
+		}
+	}
+}

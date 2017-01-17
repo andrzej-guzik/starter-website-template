@@ -1,0 +1,26 @@
+.how-we-work {
+	&__item {
+		background: rgba(247, 248, 249, 1);
+		padding: 25px;
+		position: relative;
+		margin-bottom: 45px;
+
+		@mixin atLarge{
+			margin-bottom: 0;
+		}
+
+		&__icon {
+			font-size: 2.8rem;
+			color: $accentColor;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&__text {
+			padding-top: 15px;
+			text-align: center;
+			padding-top: 65px;
+		}
+	}
+}

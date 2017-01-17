@@ -1,0 +1,26 @@
+.row {
+	@mixin clearfix;
+
+	@mixin atMedium {
+		margin-right: -45px;
+	}	
+
+	&__medium-6 {
+		@mixin atMedium {
+			float: left;
+			width: 50%;
+			padding-right: 45px;
+		}
+	}	
+	&__large-3 {
+		@mixin atLarge {
+			float: left;
+			width: 25%;
+			padding-right: 45px;
+		}
+	}
+}
+
+.row--margin-bottom {		
+		margin-bottom: 3.5rem;	
+}

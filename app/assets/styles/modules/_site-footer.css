@@ -1,0 +1,38 @@
+.site-footer {
+	background: #ecf0f1;
+
+	&__social {
+		text-align: center;
+
+		&__title {
+			margin: 0;
+			padding: 25px;
+			padding-bottom: 15px;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+		
+		&__icon {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 1.125rem;
+			border: 1px solid #555;
+			border-radius: 50%;
+			margin-right: 10px;
+			&:hover {
+				border: 1px solid $accentColor;
+				background: $accentColor;
+				color: $light;
+			}
+		}
+	}
+
+	&__copyright {
+		text-align: center;
+		font-size: .875rem;
+		padding-bottom: 8px;
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+}

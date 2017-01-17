@@ -1,0 +1,72 @@
+.main-nav {
+	opacity: 0;
+	z-index: -2;
+	position: absolute;
+	transition: transform 0.3s ease-out;
+	transform: scale(1.3);
+
+	&--is-expanded {
+		transform: scale(1);
+		opacity: 1;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		background: #f7f8f9;
+		width: 100%;
+		padding: 95px 0;
+	}
+
+	@mixin atLarge {
+		opacity: 1;
+		position: relative;
+		z-index: 99;
+		transform: scale(1);
+		line-height: 64px;
+	}
+
+	&--pull-right {
+		@mixin atLarge {
+			float: right;
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		@mixin clearfix;
+	}
+
+	li {
+		text-align: center;
+		margin: 0 15%;
+		border-bottom: 1px solid rgba(#888, .2);
+
+		@mixin atLarge {
+			display: inline-block;
+			padding-right: 16px;
+			border-bottom: none;
+			margin: 0;
+			&:last-child {
+			padding-right: 0;
+			}
+		}
+	}
+
+	a {
+		padding: 18px 0;
+		text-decoration: none;
+		display: block;
+		font-size: 1.125rem;
+		
+		@mixin atLarge {
+			padding: 0 10px;
+			font-size: 1rem;
+
+			&.is-active {
+				color: $accentColor;
+				font-weight: 700;
+			}
+		}
+	}
+}

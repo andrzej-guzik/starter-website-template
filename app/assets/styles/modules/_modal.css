@@ -1,0 +1,45 @@
+.modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(1.5);
+	transition: transform .4s ease-out;
+	background: #eee;
+	z-index: 999;
+	visibility: hidden;
+
+	&--visible {
+		transform: scale(1);
+		visibility: visible;
+	}
+
+	&__inner {
+		position: absolute;
+		top: 20%;
+
+		&__text {
+			padding-left: 45px;
+			margin-top: 0;
+		}
+
+		&__image {
+			background: url("../../assets/images/beach-sunset-1315117.jpg") no-repeat center center;
+			background-size: cover;
+			min-height: 250px;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 100px;
+		right:  50px;
+		font-size: 1.125rem;
+		font-weight: 700;
+		cursor: pointer;
+		transform: scaleX(1.4);
+	}
+}

@@ -1,0 +1,12 @@
+.animate-item {
+	@mixin atLarge {
+		opacity: 0;
+		transform: scale(1.2);
+		transition: all .8s ease-out;
+
+		&--is-visible {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}	
+}

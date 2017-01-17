@@ -1,0 +1,21 @@
+/* Breakpoints */
+$small: 560px;
+$medium: 960px;
+$large: 1200px;
+
+/* Colors */
+$darkGray: #43454e;
+$gray: #555555;
+$blue: #2980b9;
+$light: #f7f8f9;
+
+$fontColor: $gray;
+$headersColor: $darkGray;
+$accentColor: $blue;
+$linksColor: $gray;
+
+/* Fonts */
+$fontFamilyHero: 'Oswald', sans-serif;
+$fontFamilyPrimary: 'Ralaway', sans-serif;
+$fontFamilySecondary: 'Roboto', sans-serif;
+$fontFamilyLogo: 'Bungee Shade', sans-serif;
